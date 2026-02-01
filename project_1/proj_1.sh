@@ -16,16 +16,24 @@ else
 
 fi
 
-mkdir terra_project_2
-cd terra_project_2
+# Take folder name
+read -p "Enter folder name: " folder_name
+# Take file name
+read -p "Enter file name (with extension): " file_name
+# Create folder
+mkdir -p "$folder_name"
+cd $folder_name
+
+# mkdir terra_project_2
+# cd terra_project_2
 
 # Create Terraform File with content
-cat <<EOF > main.tf
+cat <<EOF > $file_name
 resource "random_string" "first" {
   length = 20
 }
 EOF
-echo "main.tf created."
+echo "$file_name created."
 
     echo "Running terraform init..."
     terraform init
@@ -42,6 +50,5 @@ echo "main.tf created."
 
 
 
-
 #   chmod 755 main.sh
-#   ./main.sh
+#   ./$file_name
