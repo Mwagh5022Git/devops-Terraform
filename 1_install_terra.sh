@@ -17,4 +17,6 @@ fi
 
 terraform version
 mkdir terra_project_2
+chmod 744 2_terra_execute.sh
+chmod 744 3_aws_cli.sh
 cd terra_project_2
