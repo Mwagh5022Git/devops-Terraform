@@ -15,8 +15,14 @@ else
 
 fi
 
-terraform version
-mkdir terra_project_2
-chmod 744 2_terra_execute.sh
+terraform version /n
+
+# Create Folder 
+echo "Enter folder name:"
+read foldername
+mkdir "$foldername"
+echo "Folder '$foldername' created successfully."
+
+chmod 744 2_execute.sh
 chmod 744 3_aws_cli.sh
-cd terra_project_2
+cd $foldername
