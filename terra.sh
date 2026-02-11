@@ -16,6 +16,7 @@ else
 
 fi
 
+terraform version
 mkdir terra_project_2
 cd terra_project_2
 
@@ -27,18 +28,18 @@ resource "random_string" "first" {
 EOF
 echo "main.tf created."
 
-    echo "Running terraform init..."
-    terraform init
+echo "Running terraform init..."
+terraform init
 
-    echo "Running terraform apply..."
-    terraform apply
+echo "Running terraform apply..."
+terraform apply
 
-    echo "Usage:"
-    echo "  ./main.sh install   # Install Terraform (run once)"
-    echo "  ./main.sh setup     # Create main.tf"
-    echo "  ./main.sh init      # Terraform init"
-    echo "  ./main.sh apply     # Terraform apply"
-    exit 1
+echo "Usage:"
+echo "  ./main.sh install   # Install Terraform (run once)"
+echo "  ./main.sh setup     # Create main.tf"
+echo "  ./main.sh init      # Terraform init"
+echo "  ./main.sh apply     # Terraform apply"
+exit 1
 
 
 
